@@ -21,10 +21,13 @@ function listItems (deliveryOrders) {
 };
 
 function searchOrder (deliveryOrders, orderItem) {
-
+var orderIn = false;
 for (var i = 0; i <deliveryOrders.length; i++) {
-  return deliveryOrders[i].item.includes(orderItem)
+  if (deliveryOrders[i].item.includes(orderItem)) {
+    orderIn = true;
+  }
 };
+return orderIn;
 }
 // var orderItem = deliveryOrders.includes(deliveryOrders.item);
 //     orderItem = true;

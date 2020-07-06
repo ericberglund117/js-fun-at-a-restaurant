@@ -39,8 +39,8 @@ function addMenuItem (restaurant, menuItem) {
 function removeMenuItem (restaurant, item, type) {
   for (var i = 0; i <= restaurant.menus[type].length; i++) {
     if (restaurant.menus[type][i].name === item) {
-        restaurant.menus[type][i].splice(i, 1)
-        return `No one is eating our ${item} \- it has been removed from the ${type} menu\!`
+        restaurant.menus[type].splice(i, 1);
+        return `No one is eating our ${item} - it has been removed from the ${type} menu\!`
       }
 
     }

@@ -25,8 +25,18 @@ function listItems(deliveryOrders) {
   return items
 };
 
-function searchOrder() {
-
+function searchOrder(deliveryOrders, item) {
+  var orderIn = false;
+  var foundOrder = deliveryOrders.find(delivery => {
+    return delivery.item === item
+  })
+  console.log(foundOrder)
+  if(foundOrder) {
+    orderIn = true
+    return orderIn
+  } else {
+    return orderIn = false;
+  }
 };
 
 

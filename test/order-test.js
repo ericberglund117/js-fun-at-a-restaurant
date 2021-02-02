@@ -124,7 +124,7 @@ describe("order.js", function() {
       assert.isFunction(refundOrder);
     });
 
-    it("should remove an order by order number", function() {
+    it.skip("should remove an order by order number", function() {
       var order1 = {
         orderNumber: 1,
         item: "burger",

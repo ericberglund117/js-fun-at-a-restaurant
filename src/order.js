@@ -1,4 +1,33 @@
+function takeOrder(order, deliveryOrders){
+  if (deliveryOrders.length < 3) {
+  return deliveryOrders.push(order)
+  };
+};
+  
+function refundOrder(order, deliveryOrders) {
+  console.log(deliveryOrders)
+ var updatedOrders = deliveryOrders.filter(delivery => {
+    return delivery.orderNumber !== order 
+  })
+  deliveryOrders = updatedOrders
+  console.log(deliveryOrders)
+  return deliveryOrders
+};
 
+function listItems(deliveryOrders) {
+  var items = ''
+  var deliveryItems = deliveryOrders.map((delivery, index) => {
+    items += delivery.item
+    if (index < 2) {
+      items += ", "
+    }
+  })
+  return items
+};
+
+function searchOrder() {
+
+};
 
 
 
